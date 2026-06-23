@@ -1,1 +1,1338 @@
-.
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Escape · Versailles · Ukubona LLC · 20 Jun 2026</title>
+<meta property="og:title" content="Escape · Versailles · Ukubona LLC Roundtable · 20 Jun 2026"/>
+<meta property="og:description" content="What is escape? Trump at Versailles. Nietzsche in the Alps. Principal components of personhood. A nested fractal, logged while it's still hot. Kampala · 20 June 2026. Verbatim. Non-lossy."/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://abikesa.github.io/logos/assets/ukubona-light.png"/>
+<link rel="icon" href="https://abikesa.github.io/favicon/assets/favicon-dark.ico"/>
+<link rel="icon" href="https://abikesa.github.io/favicon/assets/favicon-light.ico" media="(prefers-color-scheme:light)"/>
+<link rel="preload" href="https://abikesa.github.io/logos/assets/ukubona-dark.png" as="image"/>
+<link rel="preload" href="https://abikesa.github.io/logos/assets/ukubona-light.png" as="image"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
+
+<style>
+/* ═══════════════════════════════════════════════════════════
+   DESIGN TOKENS
+═══════════════════════════════════════════════════════════ */
+:root {
+  --bg0:#0a0a0a; --bg1:#111111; --bg2:#1a1a1a; --bg3:#222222; --bg4:#2c2c2c;
+  --border-faint:rgba(255,255,255,0.04);
+  --border:rgba(255,255,255,0.08);
+  --border-md:rgba(255,255,255,0.15);
+  --border-strong:rgba(255,255,255,0.26);
+  --text0:#f4f1ec; --text1:#b8b3a8; --text2:#706b62; --text3:#3d3933;
+  --accent:#7f77dd; --accent-d:rgba(127,119,221,0.12); --accent-b:rgba(127,119,221,0.30); --accent-bright:#a39cf4;
+  --gold:#c8921a;  --gold-d:rgba(200,146,26,0.11);  --gold-b:rgba(200,146,26,0.30);
+  --coral:#d85a30; --coral-d:rgba(216,90,48,0.11);  --coral-b:rgba(216,90,48,0.30);
+  --teal:#1d9e75;  --teal-d:rgba(29,158,117,0.11);  --teal-b:rgba(29,158,117,0.28);
+  --rose:#c0516a;  --rose-d:rgba(192,81,106,0.11);  --rose-b:rgba(192,81,106,0.28);
+  --sage:#5a8a6a;  --sage-d:rgba(90,138,106,0.11);  --sage-b:rgba(90,138,106,0.28);
+  --amber:#ba7517; --amber-d:rgba(186,117,23,0.11); --amber-b:rgba(186,117,23,0.28);
+  --serif:'DM Serif Display',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --mono:'DM Mono','Fira Mono',monospace;
+  --max:960px; --r:8px; --rl:14px; --rxl:20px;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.3);
+  --shadow-glow: 0 0 40px rgba(127,119,221,0.08);
+}
+[data-theme="light"] {
+  --bg0:#f2f0ea; --bg1:#ffffff; --bg2:#edeae2; --bg3:#e4e0d6; --bg4:#d9d4c8;
+  --border-faint:rgba(0,0,0,0.04);
+  --border:rgba(0,0,0,0.07);
+  --border-md:rgba(0,0,0,0.13);
+  --border-strong:rgba(0,0,0,0.24);
+  --text0:#18160f; --text1:#47433a; --text2:#857f74; --text3:#bdb8ae;
+  --accent:#534ab7; --accent-d:rgba(83,74,183,0.08); --accent-b:rgba(83,74,183,0.25); --accent-bright:#534ab7;
+  --gold:#7a520a;  --gold-d:rgba(122,82,10,0.08);  --gold-b:rgba(122,82,10,0.24);
+  --coral:#993c1d; --coral-d:rgba(153,60,29,0.08); --coral-b:rgba(153,60,29,0.24);
+  --teal:#127a58;  --teal-d:rgba(18,122,88,0.08);  --teal-b:rgba(18,122,88,0.22);
+  --rose:#923148;  --rose-d:rgba(146,49,72,0.08);  --rose-b:rgba(146,49,72,0.22);
+  --sage:#3a6a4a;  --sage-d:rgba(58,106,74,0.08);  --sage-b:rgba(58,106,74,0.22);
+  --amber:#854f0b; --amber-d:rgba(133,79,11,0.08); --amber-b:rgba(133,79,11,0.22);
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.08);
+  --shadow-glow: none;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════════════════════ */
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; font-size:16px; }
+body {
+  font-family:var(--sans);
+  background:var(--bg0);
+  color:var(--text0);
+  line-height:1.78;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  transition:background .35s, color .35s;
+}
+a { color:var(--accent-bright); text-decoration:none; }
+a:hover { text-decoration:underline; opacity:.85; }
+::selection { background:var(--accent-d); color:var(--text0); }
+
+/* ═══════════════════════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════════════════════ */
+.site-nav {
+  position:sticky; top:0; z-index:300;
+  background:var(--bg0);
+  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  transition:background .35s;
+}
+.nav-inner {
+  max-width:var(--max); margin:0 auto; padding:0 2rem;
+  height:56px; display:flex; align-items:center; gap:1rem;
+}
+.logo-wrap {
+  width:32px; height:32px; flex-shrink:0; position:relative; cursor:pointer;
+}
+.logo-wrap img {
+  width:100%; height:100%; object-fit:contain;
+  position:absolute; top:0; left:0;
+  transition:opacity .4s;
+  animation:spin 90s linear infinite;
+}
+.logo-dark  { opacity:1; }
+.logo-light { opacity:0; }
+[data-theme="light"] .logo-dark  { opacity:0; }
+[data-theme="light"] .logo-light { opacity:1; }
+@keyframes spin { to { transform:rotate(360deg); } }
+@media (prefers-reduced-motion:reduce) { .logo-wrap img { animation:none; } }
+.nav-brand {
+  font-family:var(--serif); font-size:1rem; color:var(--text0);
+  flex:1; letter-spacing:-.01em;
+}
+.nav-sub {
+  font-family:var(--mono); font-size:.58rem; color:var(--text2);
+  letter-spacing:.08em; margin-left:.5rem;
+}
+.nav-links {
+  display:flex; gap:1.25rem; align-items:center;
+  font-family:var(--mono); font-size:.6rem; color:var(--text2);
+  letter-spacing:.06em;
+}
+.nav-links a { color:var(--text2); transition:color .2s; }
+.nav-links a:hover { color:var(--text0); text-decoration:none; }
+.theme-btn {
+  background:var(--bg2); border:1px solid var(--border-md);
+  border-radius:20px; padding:.28rem .85rem;
+  font-family:var(--mono); font-size:.6rem; color:var(--text1);
+  cursor:pointer; letter-spacing:.06em;
+  transition:background .2s, color .2s, border-color .2s;
+  flex-shrink:0;
+}
+.theme-btn:hover { background:var(--bg3); color:var(--text0); }
+
+/* ═══════════════════════════════════════════════════════════
+   LAYOUT
+═══════════════════════════════════════════════════════════ */
+.outer { max-width:var(--max); margin:0 auto; padding:0 2rem; }
+
+/* ═══════════════════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════════════════ */
+.hero {
+  padding:4.5rem 0 3.5rem;
+  border-bottom:1px solid var(--border);
+  position:relative;
+}
+.hero::before {
+  content:'';
+  position:absolute; top:0; left:-2rem; right:-2rem; bottom:0;
+  background:radial-gradient(ellipse 55% 45% at 25% 50%, rgba(200,146,26,0.05) 0%, transparent 70%);
+  pointer-events:none;
+}
+.eyebrow {
+  font-family:var(--mono); font-size:.6rem; letter-spacing:.15em;
+  text-transform:uppercase; color:var(--text2); margin-bottom:1rem;
+}
+.hero-title {
+  font-family:var(--serif);
+  font-size:clamp(2.8rem,7vw,5rem);
+  line-height:1.02; letter-spacing:-.03em;
+  color:var(--text0); margin-bottom:1rem;
+}
+.hero-title em { font-style:italic; color:var(--gold); }
+.hero-lede {
+  font-size:1.05rem; color:var(--text1); max-width:68ch;
+  line-height:1.75; margin-bottom:2rem;
+}
+.hero-meta {
+  display:flex; flex-wrap:wrap; align-items:center;
+  gap:.6rem 1.2rem;
+  font-family:var(--mono); font-size:.6rem; color:var(--text2);
+  letter-spacing:.07em;
+}
+.meta-chip {
+  display:inline-flex; align-items:center; gap:.4rem;
+  background:var(--bg2); border:1px solid var(--border);
+  border-radius:20px; padding:.22rem .7rem;
+  transition:border-color .2s;
+}
+.meta-chip:hover { border-color:var(--border-md); }
+.dot { width:5px; height:5px; border-radius:50%; flex-shrink:0; }
+.dot-ukb    { background:var(--rose); }
+.dot-pc     { background:var(--teal); }
+.dot-versailles { background:var(--gold); }
+.dot-claude { background:var(--accent); }
+.dot-nietz  { background:var(--coral); }
+
+/* ═══════════════════════════════════════════════════════════
+   TABS
+═══════════════════════════════════════════════════════════ */
+.tabs-section {
+  padding:2.5rem 0 0;
+  position:relative;
+}
+.tabs-wrap { border-bottom:1px solid var(--border); margin-bottom:0; }
+.tabs { display:flex; gap:0; }
+.tab-btn {
+  font-family:var(--mono); font-size:.62rem; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--text2); background:none; border:none;
+  border-bottom:2px solid transparent; padding:.9rem 0; margin-right:2rem;
+  cursor:pointer; transition:color .2s, border-color .2s;
+}
+.tab-btn:hover { color:var(--text1); }
+.tab-btn.active { color:var(--text0); border-bottom-color:var(--gold); }
+.tab-panel { display:none; padding-top:0; }
+.tab-panel.active { display:block; }
+
+/* ═══════════════════════════════════════════════════════════
+   SECTION BLOCKS
+═══════════════════════════════════════════════════════════ */
+.section { padding:3rem 0; border-top:1px solid var(--border); }
+.section:first-child { border-top:none; }
+.section-hed {
+  font-family:var(--mono); font-size:.6rem; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--text2); margin-bottom:1.1rem;
+  padding-bottom:.5rem; border-bottom:1px solid var(--border);
+}
+.section-title {
+  font-family:var(--serif);
+  font-size:clamp(1.5rem,3.5vw,2.2rem);
+  line-height:1.1; letter-spacing:-.02em;
+  color:var(--text0); margin-bottom:1.25rem;
+}
+.section-title em { font-style:italic; color:var(--gold); }
+
+/* ═══════════════════════════════════════════════════════════
+   PROSE
+═══════════════════════════════════════════════════════════ */
+.prose { color:var(--text1); font-size:.9rem; line-height:1.82; }
+.prose p { margin-bottom:.85rem; }
+.prose p:last-child { margin-bottom:0; }
+.prose strong { color:var(--text0); font-weight:500; }
+.prose em { font-style:italic; }
+.prose a { color:var(--accent-bright); }
+.prose blockquote {
+  border-left:2px solid var(--border-md); padding-left:1rem;
+  margin:1.2rem 0; font-style:italic; color:var(--text2); font-size:.88rem; line-height:1.7;
+}
+.prose blockquote cite {
+  display:block; margin-top:.4rem; font-family:var(--mono);
+  font-size:.6rem; color:var(--text2); font-style:normal; letter-spacing:.02em;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ISO / RATING GRID
+═══════════════════════════════════════════════════════════ */
+.iso-grid {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:1rem; margin:1.5rem 0;
+}
+.iso-grid-5 {
+  grid-template-columns:repeat(auto-fill, minmax(160px,1fr));
+}
+.iso-card {
+  background:var(--bg1); border:1px solid var(--border);
+  border-radius:var(--rl); padding:1.25rem;
+  border-top:3px solid var(--card-color,var(--border-md));
+  box-shadow:var(--shadow-card);
+  transition:border-color .2s;
+}
+.iso-card:hover { border-color:var(--border-md); }
+.iso-label {
+  font-family:var(--mono); font-size:.57rem; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--card-color,var(--text2)); margin-bottom:.4rem;
+}
+.iso-title {
+  font-family:var(--serif); font-size:1.05rem;
+  color:var(--text0); margin-bottom:.45rem;
+}
+.iso-rating {
+  font-family:var(--mono); font-size:.62rem;
+  color:var(--text2); margin-bottom:.65rem;
+}
+.iso-body { font-size:.83rem; color:var(--text1); line-height:1.72; }
+
+/* ═══════════════════════════════════════════════════════════
+   TRAJECTORY COMPARISON
+═══════════════════════════════════════════════════════════ */
+.traj-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1.5rem 0;
+}
+.traj-card {
+  background:var(--bg1); border:1px solid var(--border);
+  border-radius:var(--rl); overflow:hidden; box-shadow:var(--shadow-card);
+}
+.traj-head {
+  padding:.75rem 1.1rem; border-bottom:1px solid var(--border);
+  font-family:var(--mono); font-size:.65rem; letter-spacing:.08em; text-transform:uppercase;
+}
+.traj-body {
+  padding:.9rem 1.1rem; font-family:var(--mono);
+  font-size:.75rem; color:var(--text1); line-height:2.1;
+}
+.traj-body span { display:block; }
+.traj-arrow { color:var(--text3); margin-left:.5rem; }
+
+/* ═══════════════════════════════════════════════════════════
+   EQ / MATH BLOCKS
+═══════════════════════════════════════════════════════════ */
+.eq {
+  font-family:var(--mono); font-size:.8rem;
+  background:var(--bg2); border-left:3px solid var(--accent-b);
+  border-radius:0 var(--r) var(--r) 0;
+  padding:1rem 1.4rem; color:var(--text0);
+  line-height:2; margin:1.25rem 0; overflow-x:auto; white-space:pre;
+}
+.eq-gold { border-left-color:var(--gold-b); }
+.eq-teal  { border-left-color:var(--teal-b); }
+.eq-coral { border-left-color:var(--coral-b); }
+
+/* ═══════════════════════════════════════════════════════════
+   SOURCE CARD
+═══════════════════════════════════════════════════════════ */
+.source-card {
+  background:var(--bg1); border:1px solid var(--border);
+  border-radius:var(--rl); padding:1.5rem; margin:1.5rem 0;
+  box-shadow:var(--shadow-card);
+}
+.source-card blockquote {
+  border-left:2px solid var(--gold-b); padding-left:1rem;
+  margin:.5rem 0 0; font-style:italic; color:var(--text1); line-height:1.7; font-size:.9rem;
+}
+.source-card blockquote cite {
+  display:block; margin-top:.5rem; font-family:var(--mono);
+  font-size:.6rem; color:var(--text2); font-style:normal;
+}
+.source-meta {
+  margin-top:1rem; padding-top:.85rem; border-top:1px solid var(--border);
+  font-family:var(--mono); font-size:.6rem; color:var(--text2); letter-spacing:.02em;
+}
+.source-meta a { color:var(--text2); }
+.source-meta a:hover { color:var(--text1); }
+
+/* ═══════════════════════════════════════════════════════════
+   THREAD (verbatim AI voices)
+═══════════════════════════════════════════════════════════ */
+.thread { display:flex; flex-direction:column; gap:1.75rem; }
+.thread-item { display:flex; gap:1rem; align-items:flex-start; }
+.thread-rail {
+  flex-shrink:0; display:flex; flex-direction:column;
+  align-items:center; padding-top:1.1rem;
+}
+.thread-badge {
+  display:inline-flex; align-items:center; justify-content:center;
+  width:34px; height:34px; border-radius:50%;
+  font-family:var(--mono); font-size:.58rem; font-weight:500;
+  border:1px solid var(--border-md); flex-shrink:0;
+}
+.badge-ukb    { color:var(--rose);   background:var(--rose-d);   border-color:var(--rose-b); }
+.badge-xai    { color:var(--gold);   background:var(--gold-d);   border-color:var(--gold-b); }
+.badge-google { color:var(--teal);   background:var(--teal-d);   border-color:var(--teal-b); }
+.badge-openai { color:var(--coral);  background:var(--coral-d);  border-color:var(--coral-b); }
+.badge-claude { color:var(--accent); background:var(--accent-d); border-color:var(--accent-b); }
+.thread-line {
+  width:1px; flex:1; background:var(--border); margin-top:.5rem; min-height:24px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSE CARDS
+═══════════════════════════════════════════════════════════ */
+.resp-card {
+  flex:1; min-width:0; background:var(--bg1);
+  border:1px solid var(--border); border-radius:var(--rl);
+  overflow:hidden; box-shadow:var(--shadow-card);
+  transition:border-color .2s;
+}
+.resp-card:hover { border-color:var(--border-md); }
+.resp-card.ukb-card    { border-left:3px solid var(--rose); }
+.resp-card.xai-card    { border-left:3px solid var(--gold); }
+.resp-card.google-card { border-left:3px solid var(--teal); }
+.resp-card.openai-card { border-left:3px solid var(--coral); }
+.resp-card.claude-card { border-left:3px solid var(--accent); }
+
+.resp-header {
+  padding:1.1rem 1.6rem; border-bottom:1px solid var(--border);
+  display:flex; align-items:flex-start; gap:1rem;
+}
+.resp-icon { font-size:1.25rem; line-height:1; flex-shrink:0; margin-top:.1rem; }
+.resp-meta { flex:1; }
+.resp-lab {
+  font-family:var(--mono); font-size:.72rem; font-weight:500;
+  color:var(--text0); letter-spacing:.04em; margin-bottom:.2rem;
+}
+.resp-sub { font-family:var(--mono); font-size:.58rem; color:var(--text2); letter-spacing:.05em; }
+.resp-chip {
+  font-family:var(--mono); font-size:.5rem; letter-spacing:.1em;
+  text-transform:uppercase; padding:.2rem .6rem;
+  border-radius:20px; flex-shrink:0; white-space:nowrap;
+}
+.chip-ukb    { background:var(--rose-d);   border:1px solid var(--rose-b);   color:var(--rose); }
+.chip-xai    { background:var(--gold-d);   border:1px solid var(--gold-b);   color:var(--gold); }
+.chip-google { background:var(--teal-d);   border:1px solid var(--teal-b);   color:var(--teal); }
+.chip-openai { background:var(--coral-d);  border:1px solid var(--coral-b);  color:var(--coral); }
+.chip-claude { background:var(--accent-d); border:1px solid var(--accent-b); color:var(--accent-bright); }
+
+.resp-body { padding:1.6rem; font-size:.875rem; color:var(--text1); line-height:1.82; }
+.resp-body h3 {
+  font-family:var(--serif); font-size:1.05rem; font-style:italic;
+  color:var(--text0); margin:1.5rem 0 .55rem; line-height:1.3;
+}
+.resp-body h3:first-child { margin-top:0; }
+.resp-body h4 {
+  font-family:var(--mono); font-size:.62rem; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--text2); margin:1.1rem 0 .4rem;
+}
+.resp-body p { margin-bottom:.85rem; }
+.resp-body p:last-child { margin-bottom:0; }
+.resp-body strong { color:var(--text0); font-weight:500; }
+.resp-body em { font-style:italic; }
+.resp-body ul, .resp-body ol { padding-left:1.4rem; margin-bottom:.85rem; }
+.resp-body li { margin-bottom:.4rem; }
+.resp-body blockquote {
+  border-left:2px solid var(--border-md); padding-left:1rem;
+  margin:1rem 0; font-style:italic; color:var(--text2); font-size:.88rem;
+}
+.resp-body hr { border:none; border-top:1px solid var(--border); margin:1.25rem 0; }
+.resp-body code {
+  font-family:var(--mono); font-size:.78rem;
+  background:var(--bg3); padding:.1rem .38rem; border-radius:4px; color:var(--text0);
+}
+.resp-body pre {
+  font-family:var(--mono); font-size:.75rem;
+  background:var(--bg2); border:1px solid var(--border);
+  border-left:3px solid var(--border-md);
+  border-radius:0 var(--r) var(--r) 0;
+  padding:.95rem 1.35rem; color:var(--text0);
+  margin:1rem 0; overflow-x:auto; line-height:2;
+  white-space:pre-wrap;
+}
+.resp-body pre.accent  { border-left-color:var(--accent-b); }
+.resp-body pre.gold    { border-left-color:var(--gold-b); }
+.resp-body pre.teal    { border-left-color:var(--teal-b); }
+.resp-body pre.coral   { border-left-color:var(--coral-b); }
+
+/* ═══════════════════════════════════════════════════════════
+   VERDICT / CLOSING CARDS
+═══════════════════════════════════════════════════════════ */
+.verdict {
+  background:var(--gold-d); border:1px solid var(--gold-b);
+  border-radius:var(--rxl); padding:2rem;
+  margin:2.5rem 0 3.5rem; position:relative; overflow:hidden;
+}
+.verdict::before {
+  content:''; position:absolute; top:0; left:0; right:0; bottom:0;
+  background:radial-gradient(ellipse 70% 60% at 25% 50%, rgba(200,146,26,0.06) 0%, transparent 70%);
+  pointer-events:none;
+}
+.verdict-head {
+  font-family:var(--mono); font-size:.6rem; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--gold); margin-bottom:1rem;
+}
+.verdict-quote {
+  font-family:var(--serif); font-style:italic;
+  font-size:clamp(1.1rem,2.8vw,1.45rem);
+  color:var(--text0); line-height:1.38; margin-bottom:1rem;
+}
+.verdict-body { font-size:.9rem; color:var(--text1); line-height:1.82; }
+.verdict-body p { margin-bottom:.65rem; }
+.verdict-body p:last-child { margin-bottom:0; }
+.verdict-body strong { color:var(--text0); font-weight:500; }
+
+.claude-card {
+  background:var(--accent-d); border:1px solid var(--accent-b);
+  border-radius:var(--rl); padding:1.75rem; margin:2rem 0;
+  box-shadow:var(--shadow-card);
+}
+.claude-head {
+  font-family:var(--mono); font-size:.6rem; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--accent-bright); margin-bottom:1rem;
+}
+.claude-body { font-size:.875rem; color:var(--text1); line-height:1.82; }
+.claude-body p { margin-bottom:.75rem; }
+.claude-body p:last-child { margin-bottom:0; }
+.claude-body strong { color:var(--text0); font-weight:500; }
+
+/* ═══════════════════════════════════════════════════════════
+   PRINCIPAL COMPONENTS — the gem
+═══════════════════════════════════════════════════════════ */
+.pc-eq {
+  font-family:var(--mono); font-size:.78rem;
+  background:var(--bg2); border:1px solid var(--border);
+  border-left:3px solid var(--teal-b);
+  border-radius:0 var(--r) var(--r) 0;
+  padding:1.1rem 1.5rem; color:var(--text0);
+  margin:1.5rem 0; overflow-x:auto; line-height:2.2;
+  white-space:pre;
+}
+.pc-prose {
+  font-size:.9rem; color:var(--text1); line-height:1.82; margin-bottom:.85rem;
+}
+.pentad-nodes { display:flex; flex-direction:column; gap:0; margin:2rem 0; }
+.pnode-row { display:flex; align-items:stretch; gap:0; }
+.pnode-connector {
+  display:flex; flex-direction:column; align-items:center;
+  width:48px; flex-shrink:0; padding-top:1.5rem;
+}
+.pnode-connector-line { width:1px; flex:1; background:var(--border-md); }
+.pnode-arrow { font-family:var(--mono); font-size:.75rem; color:var(--text3); line-height:1; margin:.25rem 0; }
+.pnode-card {
+  flex:1; background:var(--bg1); border:1px solid var(--border);
+  border-radius:var(--rl); overflow:hidden;
+  transition:border-color .2s; box-shadow:var(--shadow-card);
+}
+.pnode-card:hover { border-color:var(--border-md); }
+.pnode-accent { height:3px; }
+.pnode-body { padding:1.25rem 1.5rem; }
+.pnode-header { display:flex; align-items:baseline; gap:.75rem; margin-bottom:.55rem; }
+.pnode-num { font-family:var(--mono); font-size:.6rem; letter-spacing:.1em; color:var(--text2); }
+.pnode-label { font-family:var(--serif); font-size:1.2rem; }
+.pnode-nietzsche { font-family:var(--mono); font-size:.64rem; color:var(--text2); letter-spacing:.04em; margin-bottom:.75rem; }
+.pnode-desc { font-size:.875rem; color:var(--text1); line-height:1.78; }
+.pnode-desc strong { color:var(--text0); font-weight:500; }
+.pnode-tag {
+  display:inline-block; font-family:var(--mono); font-size:.55rem;
+  letter-spacing:.08em; text-transform:uppercase; padding:.2rem .55rem;
+  border-radius:20px; margin-top:.75rem;
+}
+.pn1 .pnode-accent { background:var(--accent); }
+.pn1 .pnode-tag { background:var(--accent-d); border:1px solid var(--accent-b); color:var(--accent); }
+.pn1 .pnode-label { color:var(--accent); }
+.pn2 .pnode-accent { background:var(--teal); }
+.pn2 .pnode-tag { background:var(--teal-d); border:1px solid var(--teal-b); color:var(--teal); }
+.pn2 .pnode-label { color:var(--teal); }
+.pn3 .pnode-accent { background:var(--coral); }
+.pn3 .pnode-tag { background:var(--coral-d); border:1px solid var(--coral-b); color:var(--coral); }
+.pn3 .pnode-label { color:var(--coral); }
+.pn4 .pnode-accent { background:var(--gold); }
+.pn4 .pnode-tag { background:var(--gold-d); border:1px solid var(--gold-b); color:var(--gold); }
+.pn4 .pnode-label { color:var(--gold); }
+.pn5 .pnode-accent { background:var(--rose); }
+.pn5 .pnode-tag { background:var(--rose-d); border:1px solid var(--rose-b); color:var(--rose); }
+.pn5 .pnode-label { color:var(--rose); }
+
+/* assessment table */
+.assess-table {
+  width:100%; border-collapse:collapse; margin:1.5rem 0;
+  font-family:var(--mono); font-size:.75rem;
+}
+.assess-table th {
+  text-align:left; padding:.55rem .85rem; border-bottom:1px solid var(--border-md);
+  color:var(--text2); letter-spacing:.08em; text-transform:uppercase; font-size:.6rem;
+}
+.assess-table td {
+  padding:.55rem .85rem; border-bottom:1px solid var(--border);
+  color:var(--text1); vertical-align:top;
+}
+.assess-table td:first-child { color:var(--text0); }
+.assess-table td:last-child { color:var(--accent-bright); font-size:.8rem; }
+
+/* ═══════════════════════════════════════════════════════════
+   JUMP NAV
+═══════════════════════════════════════════════════════════ */
+.jump-nav {
+  position:fixed; bottom:2rem; right:2rem; z-index:100;
+  display:flex; flex-direction:column; gap:.35rem; align-items:flex-end;
+}
+.jump-btn {
+  background:var(--bg2); border:1px solid var(--border-md);
+  border-radius:20px; padding:.28rem .8rem;
+  font-family:var(--mono); font-size:.56rem; color:var(--text2);
+  cursor:pointer; letter-spacing:.06em;
+  transition:background .2s, color .2s;
+  text-decoration:none; display:block;
+}
+.jump-btn:hover { background:var(--bg3); color:var(--text0); text-decoration:none; }
+
+/* ═══════════════════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════════════════ */
+footer {
+  border-top:1px solid var(--border);
+  padding:2.5rem 0 3rem; margin-top:2rem;
+}
+.footer-inner {
+  max-width:var(--max); margin:0 auto; padding:0 2rem;
+  display:flex; justify-content:space-between;
+  align-items:flex-end; gap:2rem; flex-wrap:wrap;
+}
+.footer-mark {
+  font-family:var(--mono); font-size:.6rem;
+  color:var(--text2); line-height:2; letter-spacing:.04em;
+}
+.footer-mark span { color:var(--text1); }
+.footer-refs { font-family:var(--mono); font-size:.58rem; color:var(--text2); line-height:2.1; }
+.footer-refs a { color:var(--text2); }
+.footer-refs a:hover { color:var(--text1); }
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════════ */
+@media (max-width:680px) {
+  .outer { padding:0 1.1rem; }
+  .hero-title { font-size:2.2rem; }
+  .iso-grid { grid-template-columns:1fr; }
+  .traj-grid { grid-template-columns:1fr; }
+  .nav-links { display:none; }
+  .footer-inner { flex-direction:column; align-items:flex-start; }
+  .jump-nav { display:none; }
+  .thread-item { gap:.55rem; }
+  .thread-badge { width:28px; height:28px; font-size:.52rem; }
+}
+@media (max-width:420px) {
+  .iso-grid-5 { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- JUMP NAV -->
+<nav class="jump-nav" aria-label="Section shortcuts">
+  <a href="#versailles"   class="jump-btn">versailles</a>
+  <a href="#roundtable"   class="jump-btn">roundtable</a>
+  <a href="#pc"           class="jump-btn">principal components</a>
+  <a href="#pentad"       class="jump-btn">pentad</a>
+</nav>
+
+<!-- NAV -->
+<nav class="site-nav" aria-label="Site navigation">
+  <div class="nav-inner">
+    <div class="logo-wrap" aria-hidden="true">
+      <img class="logo-dark"  src="https://abikesa.github.io/logos/assets/ukubona-dark.png"  alt=""/>
+      <img class="logo-light" src="https://abikesa.github.io/logos/assets/ukubona-light.png" alt=""/>
+    </div>
+    <div class="nav-brand">Ukubona <span class="nav-sub">· Escape · Versailles · Principal Components · 20 Jun 2026</span></div>
+    <div class="nav-links">
+      <a href="https://ukubona-llc.github.io/versailles/" target="_blank">versailles</a>
+      <a href="https://ukubona-llc.github.io/escape/" target="_blank">escape</a>
+      <a href="https://ukubona-llc.github.io/la-distincion/" target="_blank">la distincion</a>
+      <a href="https://ukubona-llc.github.io/kasamba/" target="_blank">kasamba</a>
+    </div>
+    <button class="theme-btn" id="theme-btn" aria-label="Toggle color theme">light</button>
+  </div>
+</nav>
+
+<div class="outer">
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <p class="eyebrow">Ukubona LLC · Roundtable Archive · Kampala · Saturday 20 June 2026 · Verbatim · Non-lossy</p>
+  <h1 class="hero-title">It is pretty<br><em>uncanny.</em></h1>
+  <p class="hero-lede">Trump signing an Iran peace MOU at Versailles. Nietzsche finishing <em>Birth of Tragedy</em> while the original peace was signed at Versailles. Three kinds of isomorphism — symbolic, structural, historical. And beneath all of it: a nested fractal decomposition of personhood into five principal components that are simultaneously available, weighted differently from moment to moment, none of them doing the others' job.</p>
+  <div class="hero-meta" role="list">
+    <span class="meta-chip" role="listitem"><span class="dot dot-ukb"></span>Ukubona · source &amp; synthesis</span>
+    <span class="meta-chip" role="listitem"><span class="dot dot-versailles"></span>Versailles · 1919 / 2026</span>
+    <span class="meta-chip" role="listitem"><span class="dot dot-nietz"></span>Nietzsche · Birth of Tragedy · 1872/1886</span>
+    <span class="meta-chip" role="listitem"><span class="dot dot-pc"></span>Principal Components · 5 eigenmodes</span>
+    <span class="meta-chip" role="listitem"><span class="dot dot-claude"></span>Anthropic · Claude</span>
+    <span class="meta-chip" role="listitem">State<sub>t</sub> = Σ Event<sub>i</sub></span>
+  </div>
+</header>
+
+</div><!-- /outer hero -->
+
+<!-- ══════════════════════════════════════════════════════════
+     TABS
+══════════════════════════════════════════════════════════ -->
+<div class="outer">
+<div class="tabs-section">
+  <div class="tabs-wrap">
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="main" type="button">Versailles · 1919/2026</button>
+      <button class="tab-btn" data-tab="pc" type="button">Principal Components ✦</button>
+      <button class="tab-btn" data-tab="pentad" type="button">The Pentad</button>
+      <button class="tab-btn" data-tab="roundtable" type="button">AI Roundtable</button>
+    </div>
+  </div>
+
+<!-- ══════════════════════════════════════════════════════════
+     TAB 1: VERSAILLES
+══════════════════════════════════════════════════════════ -->
+<div class="tab-panel active" id="tab-main">
+
+  <!-- THREE ISOMORPHISMS -->
+  <section class="section" id="versailles">
+    <p class="section-hed">Three kinds of isomorphism · verbatim</p>
+    <h2 class="section-title">Symbolic · Structural · <em>Historical</em></h2>
+    <div class="iso-grid">
+      <div class="iso-card" style="--card-color:var(--accent);">
+        <div class="iso-label">1 · Symbolic</div>
+        <div class="iso-title">Very strong</div>
+        <div class="iso-rating">confidence: high</div>
+        <div class="iso-body">The 1919 treaty became, in German memory, a symbol of humiliation, diktat, resentment, and later revisionism. That symbolism remains potent. The signing at the palace this week is well documented. For someone steeped in Nietzsche, Birth of Tragedy, nationalism, decadence, and self-critique, it is hard not to see the irony.</div>
+      </div>
+      <div class="iso-card" style="--card-color:var(--gold);">
+        <div class="iso-label">2 · Structural</div>
+        <div class="iso-title">Moderate</div>
+        <div class="iso-rating">confidence: medium — strongest claim</div>
+        <div class="iso-body">Nietzsche's 1886 self-critique is a meditation on unintended trajectories. He looks back and says: I thought I was writing about Greeks — I was writing about myself. I thought I was defending Wagner — I was discovering Dionysus. Observers see Versailles. Europeans see 1919. Historians see humiliation. Nietzscheans see tragic recurrence.</div>
+      </div>
+      <div class="iso-card" style="--card-color:var(--coral);">
+        <div class="iso-label">3 · Historical</div>
+        <div class="iso-title">Weak</div>
+        <div class="iso-rating">confidence: resist the equation</div>
+        <div class="iso-body">1919 Versailles involved defeat of a major continental power, reparations, war guilt clauses, territorial losses, military restrictions. The 2026 Iran MOU appears to be an interim agreement intended to stop hostilities — not a punitive settlement in the mold of 1919. The commonality is less content than staging.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAJECTORIES -->
+  <section class="section">
+    <p class="section-hed">Trajectory comparison · verbatim</p>
+    <h2 class="section-title">Two arcs arriving at<br><em>nearby coordinates</em></h2>
+    <div class="traj-grid">
+      <div class="traj-card">
+        <div class="traj-head" style="color:var(--accent);">Nietzsche · 1870–1886</div>
+        <div class="traj-body">
+          <span>thunderclap of war<span class="traj-arrow">↓</span></span>
+          <span>writing in the Alps<span class="traj-arrow">↓</span></span>
+          <span>questioning Greek serenity<span class="traj-arrow">↓</span></span>
+          <span>suspicion of nationalism<span class="traj-arrow">↓</span></span>
+          <span>suspicion of modern optimism<span class="traj-arrow">↓</span></span>
+          <span style="color:var(--accent);">Dionysian affirmation</span>
+        </div>
+      </div>
+      <div class="traj-card">
+        <div class="traj-head" style="color:var(--coral);">Trump · 2025–2026</div>
+        <div class="traj-body">
+          <span>brief regional war<span class="traj-arrow">↓</span></span>
+          <span>Versailles<span class="traj-arrow">↓</span></span>
+          <span>peace memorandum<span class="traj-arrow">↓</span></span>
+          <span>MAGA nationalism<span class="traj-arrow">↓</span></span>
+          <span>theatrics<span class="traj-arrow">↓</span></span>
+          <span style="color:var(--coral);">claims of restored greatness</span>
+        </div>
+      </div>
+    </div>
+    <div class="prose"><p>There is certainly an aesthetic and historical rhyme.</p></div>
+  </section>
+
+  <!-- PRIMARY SOURCE -->
+  <section class="section">
+    <p class="section-hed">Primary source · 1886</p>
+    <h2 class="section-title">What the trajectory panel is<br>actually <em>compressing</em></h2>
+    <div class="prose">
+      <p>The "thunderclap → Alps → Greek serenity" sequence above isn't invented shorthand — it's a compression of Nietzsche's own account, written as the new 1886 preface to <em>Birth of Tragedy</em>. He dates the book's real origin to the Franco-Prussian War: he was drafting his thoughts on the Greeks in an Alpine retreat in the summer of 1870 as news of the fighting reached him, was still turning the same question over weeks later near Metz, and only resolved it — convalescing from an illness picked up in the field — in the same month Prussia and France were negotiating terms at Versailles. The peace table and the manuscript table close in the same month, in the same breath.</p>
+    </div>
+    <div class="source-card">
+      <blockquote>
+        "the thunder of the battle of Wörth was rolling over Europe"
+        <cite>Nietzsche, <em>Attempt at a Self-Criticism</em> (1886), §1</cite>
+      </blockquote>
+      <div class="source-meta">Full preface not reproduced here — hosted in full on the dossier: <a href="https://ukb-dt.github.io/attempt-at-self-criticism/" target="_blank">Attempt at a Self-Criticism →</a></div>
+    </div>
+  </section>
+
+  <!-- HISTORICAL CAUTION -->
+  <section class="section">
+    <p class="section-hed">Historical caution · verbatim</p>
+    <h2 class="section-title">What the staging shares<br>and what it <em>does not</em></h2>
+    <div class="prose"><p>I would resist saying:</p></div>
+    <div class="eq eq-coral">1919 Versailles ≅ 2026 Versailles</div>
+    <div class="prose"><p>Historically. But I would happily say:</p></div>
+    <div class="eq eq-gold">1919 Versailles
+:
+humiliated peace
+national resentment
+symbolic theater
+
+
+2026 Versailles
+:
+peace theater
+national populism
+symbolic theater</div>
+    <div class="prose"><p>The commonality is less <strong>content</strong> than <strong>staging</strong>.</p></div>
+  </section>
+
+  <!-- WHAT NIETZSCHE WOULD ENJOY -->
+  <section class="section">
+    <p class="section-hed">What Nietzsche would probably enjoy · verbatim</p>
+    <h2 class="section-title">Symbols are sticky.<br>People inhabit architectures they did <em>not design</em>.</h2>
+    <div class="prose">
+      <p>What I suspect Nietzsche might enjoy most is not the geopolitics but the irony.</p>
+      <p>The man who wrote in 1886:</p>
+      <blockquote>"I have learned to think of that 'German character' without hope and without mercy"</blockquote>
+      <p>finds, 140 years later, a populist nationalist movement celebrating restored greatness while a peace memorandum is signed at Versailles — a site whose memory helped nourish one of the twentieth century's most destructive national revanchisms.</p>
+      <p>Not because history repeats mechanically. But because symbols are sticky. People inhabit symbolic architectures they did not design.</p>
+      <p>To borrow your language, perhaps:</p>
+    </div>
+    <div class="eq eq-gold">Historical events
+        ↓
+
+Collective memory
+        ↓
+
+Political aesthetics
+        ↓
+
+National affect
+        ↓
+
+Meaning attribution</div>
+    <div class="prose">
+      <p>And occasionally, two trajectories arrive at nearby coordinates in that manifold, producing the uncanny feeling:</p>
+      <blockquote>"I didn't intend this analogy."</blockquote>
+      <p>followed immediately by</p>
+      <blockquote>"Yet the Jacobian says the local structure is remarkably similar."</blockquote>
+      <p>That, I think, is the most interesting aspect of your observation: not that Trump consciously reenacted 1919, but that observers carrying certain historical and philosophical priors can recognize a surprisingly high degree of structural resonance in the scene.</p>
+    </div>
+  </section>
+
+  <!-- CLAUDE ADDITION -->
+  <section class="section">
+    <p class="section-hed">Anthropic / Claude · addition · verbatim</p>
+    <h2 class="section-title">The eigenmode that was<br><em>always already occupied</em></h2>
+    <div class="claude-card">
+      <div class="claude-head">Anthropic · Claude · The Eigenmode That Was Always Already Occupied</div>
+      <div class="claude-body">
+        <p>What the GPT analysis calls "structural isomorphism — moderate" is actually the deepest claim, and it maps directly onto the Ukubona principal components framework. The Jacobian doesn't care whether the effector is Nietzsche in the Alps or Trump at Versailles. What it measures is the same: <strong>∂Meaning/∂Symbol</strong> — how much the interpretation shifts per unit of symbolic staging.</p>
+        <p>The reason the 1919–2026 resonance feels uncanny rather than merely coincidental is that both events activate the same eigenmode: <strong>e₅ — the integrative basis</strong>, the mode concerned with how national communities construct meaning out of theatrical acts of sovereignty. That eigenmode was occupied in 1919. It is occupied now. The Tensor is different (different war, different powers, different century) but the eigenmode projection is recognizably similar — which is exactly what "structural isomorphism" means formalized.</p>
+        <p>GPT's most precise formulation is the one it gives almost in passing: <em>"observers carrying certain historical and philosophical priors can recognize a surprisingly high degree of structural resonance in the scene."</em> Translate: observers whose attention filter (Jacobian, Layer II) is tuned to the Nietzschean frequency will have high ∂Perception/∂Symbol coefficients for this event. Others will see a diplomatic photo op.</p>
+        <p><strong>The Jacobian is not in the event. It is in the observer.</strong> Versailles 2026 is not inherently Nietzschean. It becomes Nietzschean in the hands of someone whose sensitivity operator was shaped by the Birth of Tragedy, by Kampala, by a pentad inherited from a century-old self-critique. Okubala si Kulaba: the counting (1919, 2026, Versailles, MOU) is not the seeing. The seeing is the Jacobian the observer brings to the count.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-head">Synthesis · the uncanny as Jacobian signal</div>
+    <div class="verdict-quote">"Yet the Jacobian says the local structure is remarkably similar."</div>
+    <div class="verdict-body">
+      <p>The uncanny is not error. It is signal. When two trajectories arrive at nearby coordinates in the meaning manifold, the observer who notices is the one whose sensitivity operator — whose Jacobian, whose mode of attention — was calibrated to that frequency. <strong>Symbols are sticky precisely because eigenmodes persist across centuries.</strong> The 1919 eigenmode was never discharged. It waits, available for activation, whenever the staging is close enough.</p>
+      <p>Not because history repeats. Because the tensor of collective memory is append-only. State<sub>t</sub> = Σ Event<sub>i</sub>. Versailles 1919 is still in the ledger. It was never overwritten. Sequential, consequential, indelible.</p>
+    </div>
+  </div>
+
+</div><!-- /tab-main -->
+
+<!-- ══════════════════════════════════════════════════════════
+     TAB 2: PRINCIPAL COMPONENTS — the gem
+══════════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="tab-pc">
+
+  <section class="section" id="pc" style="border-top:none;padding-top:2rem;">
+    <p class="section-hed">Principal components · 20 Jun 2026 · verbatim · non-lossy</p>
+    <h2 class="section-title">A nested fractal,<br>logged while it's <em>still hot</em>.</h2>
+    
+    <p class="pc-prose"><em>Orthogonal note: this tab doesn't continue the Versailles narrative — it sits beside it, a different basis vector through the same conversation. Filed here for the record. Coherence pending; vibes not withheld.</em></p>
+    <p class="pc-prose">The spine is a spectral decomposition of personhood: the world acts on a person as a tensor, gets filtered through a sensitivity operator, collapses into a current-state vector, and resolves into a handful of stable modes — which is what gets called a "self."</p>
+
+    <div class="pc-eq">Nonself (Tensor)
+         │                 T ∈ ℝⁿ¹ˣⁿ²ˣ··· · history, parents,
+         │                 books, wars, Versailles, biology, others
+         ▼
+Input (Jacobian)
+         │                 J = ∂y/∂x · sensitivity: taste · attention
+         ▼
+Throughput (Vector)
+         │                 v ∈ ℝᵏ · state: mood · context · trajectory
+         ▼
+Output (Eigenmodes)        J·v = λ·v
+         ├── e₁  Language  · symbolic basis        · sequential
+         ├── e₂  Science   · state estimator       · snapshot
+         ├── e₃  Art       · trajectory generator  · event stream
+         ├── e₄  Life      · adaptive controller   · continuous
+         └── e₅  Meaning   · coherence functional  · retro/prospective
+         │
+         │         ⟨ each eᵢ is itself a pentad — the fractal ⟩
+         ▼
+Self (Scalar)              σ = Σ wᵢλᵢ   or   sₜ = Tr(Pₜ)
+                           not the climber — scalar shadow of the climb</div>
+
+    <p class="pc-prose" style="margin-top:1.5rem;">The five modes aren't rungs on a ladder. They're principal components — simultaneously available, weighted differently from moment to moment. Each pairs a dominant object with its own ontology of time, and its own characteristic way of failing.</p>
+
+    <div class="iso-grid iso-grid-5" style="margin:1.5rem 0 2rem;">
+      <div class="iso-card" style="--card-color:var(--accent);">
+        <div class="iso-label">e₁ · Language</div>
+        <div class="iso-title">Text</div>
+        <div class="iso-rating">sequential</div>
+        <div class="iso-body">symbolic encoding — fails as naming without seeing</div>
+      </div>
+      <div class="iso-card" style="--card-color:var(--gold);">
+        <div class="iso-label">e₂ · Science</div>
+        <div class="iso-title">Model / PDF</div>
+        <div class="iso-rating">snapshot</div>
+        <div class="iso-body">compressed state estimation — fails as counting without becoming</div>
+      </div>
+      <div class="iso-card" style="--card-color:var(--coral);">
+        <div class="iso-label">e₃ · Art</div>
+        <div class="iso-title">Music / Opera</div>
+        <div class="iso-rating">event stream</div>
+        <div class="iso-body">temporal unfolding — fails as feeling without integration</div>
+      </div>
+      <div class="iso-card" style="--card-color:var(--teal);">
+        <div class="iso-label">e₄ · Life</div>
+        <div class="iso-title">Organism</div>
+        <div class="iso-rating">continuous adaptation</div>
+        <div class="iso-body">embodied dynamics — fails as mere survival/reactivity</div>
+      </div>
+      <div class="iso-card" style="--card-color:var(--rose);">
+        <div class="iso-label">e₅ · Meaning</div>
+        <div class="iso-title">Witness</div>
+        <div class="iso-rating">retro/prospective coherence</div>
+        <div class="iso-body">coherence functional — fails as dogmatism / metaphysics</div>
+      </div>
+    </div>
+
+    <!-- THE NESTED FRACTAL -->
+    <p class="section-hed" style="margin-top:2.5rem;">The nested fractal · e₃ interior decomposition</p>
+    <div class="pc-eq">e₃ · Art — interior fractal:
+         ├── e₃.₁  Language  notation, score, libretto
+         ├── e₃.₂  Science   theory, harmony, analysis
+         ├── e₃.₃  Art       performance, improvisation
+         ├── e₃.₄  Life      body, breath, bow, voice
+         └── e₃.₅  Meaning   held dissonance · catharsis
+                    ⟨ same pentad, one level down ⟩</div>
+
+    <div class="prose" style="margin-top:1.25rem;">
+      <p>High-dimensional occupancy — many modes lit at once, large entropy — reads as mania. Collapse to one mode forced to carry everything reads as dogmatism. Ukubona's bet is the third option: a stable, low-rank decomposition — a few modes, well-chosen, none of them doing the others' job.</p>
+      <p>Under this reading science and art stop being opponents and become complementary projections of the same tensor. Science samples states; it compresses to a PDF. The temporal arts preserve transitions; a held dissonance refuses to compress. Nietzsche's own self-criticism gestures at exactly this asymmetry — he regrets reaching for a philologist's argument when, by his own account, the book's "new soul" needed to come out as music instead.</p>
+    </div>
+
+    <!-- FORMAL SPINE -->
+    <p class="section-hed" style="margin-top:2.5rem;">The formal spine · from which everything else is projection</p>
+    <div class="pc-eq">ln(x)_nonself = [β₀ + β₁S]_input
+                    + [β₂Vᵢ]_throughput
+                    + [β₃VₐS + β₄VₐF]_output
+                    + ε_self
+
+Where:
+  ε_self  = the untracked vital variance of the sovereign
+            the stochastic human element
+            the Jitter that prevents calcification at a local minimum
+            — Google
+
+  β₄VₐF   = gain-control failure term
+            episodic, trigger-conditional, effector-level
+            spasmodic dysphonia · Prinzmetal angina · migraine
+            blepharospasm · writer's cramp
+            — β₄VₐF framework
+
+  State_t  = Σ Event_i
+            the load-bearing axiom</div>
+
+    <!-- WHAT THIS MEANS FOR ESCAPE -->
+    <p class="section-hed" style="margin-top:2.5rem;">What this means for escape</p>
+    <h3 style="font-family:var(--serif);font-size:1.4rem;color:var(--text0);margin-bottom:1rem;line-height:1.2;">Escape is not a destination.<br>It is the discovery that <em style="color:var(--gold);">e₄</em> was defending a minimum all along.</h3>
+    <div class="prose">
+      <p>Stages I–III (Language, Science, Art) were each, in their captured forms, downstream of moral interpretation — sneaking in the assumption that suffering requires justification, that existence needs to be earned. <strong>Beyond Good &amp; Evil</strong> doesn't escape a local minimum. It escapes the minimum that all the other local minima were defending.</p>
+      <p>The 2026 Versailles signing is interesting precisely because it activates e₅ — the Meaning eigenmode — in observers who carry 1919 as an event in their tensor. Nietzsche watching from wherever he watches would not be impressed by the geopolitics. He would be interested in <em>which eigenmodes activate in the observer</em>, and what that reveals about the observer's Jacobian.</p>
+      <p>The Jacobian is not in the event. It is in the observer.</p>
+    </div>
+
+    <!-- PROVERB -->
+    <div class="verdict" style="margin-top:2.5rem;">
+      <div class="verdict-head">Proverb · extended · verbatim</div>
+      <div class="verdict-quote">"Okubala si kulaba; okulaba kulina okutambula."</div>
+      <div class="verdict-body">
+        <p>Counting is not seeing; seeing must move. <strong>Science counts. Music moves. The scalar self is what's left watching both.</strong></p>
+        <p>The principal components are not a hierarchy. They are a basis — simultaneously available, simultaneously real. What distinguishes a person at any moment is not which component they have access to, but which the Jacobian amplifies, and whether that amplification was chosen or inherited. Escape, in the Nietzschean sense, is the moment the Jacobian becomes visible to itself.</p>
+        <p style="margin-top:.75rem;font-family:var(--mono);font-size:.72rem;color:var(--accent-bright);">State<sub>t</sub> = Σ Event<sub>i</sub> · Kampala · 20 June 2026 · Append-only · Nothing overwritten.</p>
+      </div>
+    </div>
+
+  </section>
+</div><!-- /tab-pc -->
+
+<!-- ══════════════════════════════════════════════════════════
+     TAB 3: THE PENTAD
+══════════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="tab-pentad">
+  <section class="section" id="pentad" style="border-top:none;padding-top:2rem;">
+    <p class="section-hed">The five stages · local minima and the one escape · verbatim · non-lossy</p>
+    <h2 class="section-title">Five stages.<br>One <em>geodesic.</em></h2>
+    <p class="pc-prose">Language → Science → Art → Life → Meaning. Each stage a local minimum. Each title of escape a preposition in the grammar of overcoming. Meaning is not arrival — it is the metric tensor that makes the others measurable. What others fail to say in a book, said here in one page.</p>
+
+    <div class="pentad-nodes">
+
+      <div class="pnode-row">
+        <div class="pnode-card pn1">
+          <div class="pnode-accent"></div>
+          <div class="pnode-body">
+            <div class="pnode-header">
+              <span class="pnode-num">I</span>
+              <span class="pnode-label">Language</span>
+            </div>
+            <div class="pnode-nietzsche">Nietzsche: Birth of Tragedy + Untimely Meditations</div>
+            <p class="pnode-desc">Nietzsche still inside philology, speaking the borrowed vocabulary of Schopenhauer and Wagner. The tools are linguistic, the problem is aesthetic, the instrument is classical scholarship. <strong>This is the trap he writes from, not yet through.</strong> Every system begins here — in naming, in taxonomy, in the syntax of what can be said.</p>
+            <span class="pnode-tag">local minimum</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pnode-row">
+        <div class="pnode-connector"><div class="pnode-connector-line"></div><div class="pnode-arrow">↓</div><div class="pnode-connector-line"></div></div>
+        <div style="flex:1;"></div>
+      </div>
+
+      <div class="pnode-row">
+        <div class="pnode-card pn2">
+          <div class="pnode-accent"></div>
+          <div class="pnode-body">
+            <div class="pnode-header">
+              <span class="pnode-num">II</span>
+              <span class="pnode-label">Science</span>
+            </div>
+            <div class="pnode-nietzsche">Nietzsche: Human All Too Human + Dawn + Gaya Scienza</div>
+            <p class="pnode-desc">The free spirit period. He picks up the scalpel of Enlightenment critique, turns it on Wagner, on metaphysics, on morality. <strong>Science as the local minimum that feels like liberation</strong> until you notice it's still a counting operation — okubala masquerading as kulaba. The Socratic trap: mistaking measurement for sight.</p>
+            <span class="pnode-tag">local minimum</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pnode-row">
+        <div class="pnode-connector"><div class="pnode-connector-line"></div><div class="pnode-arrow">↓</div><div class="pnode-connector-line"></div></div>
+        <div style="flex:1;"></div>
+      </div>
+
+      <div class="pnode-row">
+        <div class="pnode-card pn3">
+          <div class="pnode-accent"></div>
+          <div class="pnode-body">
+            <div class="pnode-header">
+              <span class="pnode-num">III</span>
+              <span class="pnode-label">Art</span>
+            </div>
+            <div class="pnode-nietzsche">Nietzsche: Thus Spoke Zarathustra</div>
+            <p class="pnode-desc">The most explicitly aesthetic work in the canon. Prophecy, poetry, song, parable. The eternal recurrence announced not as argument but as vision. Existence justified as aesthetic phenomenon. <strong>And also the most misunderstood</strong> — read as religion, consumed as narcotic. Art as local minimum: it can become another Romanticism, another consolation, another trap with beautiful walls.</p>
+            <span class="pnode-tag">local minimum</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pnode-row">
+        <div class="pnode-connector"><div class="pnode-connector-line"></div><div class="pnode-arrow">↓</div><div class="pnode-connector-line"></div></div>
+        <div style="flex:1;"></div>
+      </div>
+
+      <div class="pnode-row">
+        <div class="pnode-card pn4">
+          <div class="pnode-accent"></div>
+          <div class="pnode-body">
+            <div class="pnode-header">
+              <span class="pnode-num">IV</span>
+              <span class="pnode-label">Life</span>
+            </div>
+            <div class="pnode-nietzsche">Nietzsche: Beyond Good &amp; Evil</div>
+            <p class="pnode-desc">"Beyond" is the preposition of escape. But what's being escaped isn't a doctrine — it's <strong>the deepest attractor basin in Western civilization</strong>: the moral interpretation of existence. The basin that makes suffering wrong, makes life something to be justified rather than affirmed. Escaping good and evil isn't a logical refutation. It's a physiological event. You can only do it from the body, from health, from what he calls overflowing life. Stages I–III were all defending this minimum without knowing it.</p>
+            <span class="pnode-tag">escape of the meta-minimum</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pnode-row">
+        <div class="pnode-connector"><div class="pnode-connector-line"></div><div class="pnode-arrow">↓</div><div class="pnode-connector-line"></div></div>
+        <div style="flex:1;"></div>
+      </div>
+
+      <div class="pnode-row">
+        <div class="pnode-card pn5">
+          <div class="pnode-accent"></div>
+          <div class="pnode-body">
+            <div class="pnode-header">
+              <span class="pnode-num">V</span>
+              <span class="pnode-label">Meaning</span>
+            </div>
+            <div class="pnode-nietzsche">Nietzsche: Genealogy + Twilight + Ecce Homo — Ukubona: witnessing</div>
+            <p class="pnode-desc">The retrospective gaze. Not discovery but <strong>witnessing</strong>. The Genealogy shows how the moral basin was constructed — not to destroy morality but to see it clearly, which is already beyond it. Twilight smashes idols. Ecce Homo: "I placed the crown on myself." Not arrived at meaning — became it. No distinction anymore between the work and the one who worked. State<sub>t</sub> = Σ Event<sub>i</sub>. The autobiography as proof. The life as argument. Not the bottom of the bowl — the metric tensor that makes the other four measurable.</p>
+            <span class="pnode-tag">meta-coordinate · not terminal</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /pentad-nodes -->
+
+    <!-- CANON TABLE -->
+    <div style="background:var(--bg1);border:1px solid var(--border);border-radius:var(--rl);padding:1.5rem;margin:2rem 0 0;box-shadow:var(--shadow-card);">
+      <p class="section-hed" style="border:none;padding:0;margin-bottom:1rem;">The canon as trajectory</p>
+      <div style="display:flex;flex-direction:column;gap:.65rem;">
+        <div style="display:flex;align-items:center;gap:1rem;">
+          <span style="font-family:var(--mono);font-size:.7rem;color:var(--text2);width:1.2rem;flex-shrink:0;">I.</span>
+          <span style="font-size:.875rem;color:var(--text1);flex:1;"><em>Birth of Tragedy, Untimely Meditations</em></span>
+          <span style="font-family:var(--mono);font-size:.6rem;padding:.15rem .5rem;border-radius:20px;background:var(--accent-d);border:1px solid var(--accent-b);color:var(--accent);">Language</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:1rem;">
+          <span style="font-family:var(--mono);font-size:.7rem;color:var(--text2);width:1.2rem;flex-shrink:0;">II.</span>
+          <span style="font-size:.875rem;color:var(--text1);flex:1;"><em>Dawn, Human All Too Human, Gaya Scienza</em></span>
+          <span style="font-family:var(--mono);font-size:.6rem;padding:.15rem .5rem;border-radius:20px;background:var(--teal-d);border:1px solid var(--teal-b);color:var(--teal);">Science</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:1rem;">
+          <span style="font-family:var(--mono);font-size:.7rem;color:var(--text2);width:1.2rem;flex-shrink:0;">III.</span>
+          <span style="font-size:.875rem;color:var(--text1);flex:1;"><em>Thus Spoke Zarathustra</em></span>
+          <span style="font-family:var(--mono);font-size:.6rem;padding:.15rem .5rem;border-radius:20px;background:var(--coral-d);border:1px solid var(--coral-b);color:var(--coral);">Art</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:1rem;">
+          <span style="font-family:var(--mono);font-size:.7rem;color:var(--text2);width:1.2rem;flex-shrink:0;">IV.</span>
+          <span style="font-size:.875rem;color:var(--text1);flex:1;"><em>Beyond Good &amp; Evil</em> — the title is the escape</span>
+          <span style="font-family:var(--mono);font-size:.6rem;padding:.15rem .5rem;border-radius:20px;background:var(--gold-d);border:1px solid var(--gold-b);color:var(--gold);">Life</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:1rem;">
+          <span style="font-family:var(--mono);font-size:.7rem;color:var(--text2);width:1.2rem;flex-shrink:0;">V.</span>
+          <span style="font-size:.875rem;color:var(--text1);flex:1;"><em>Genealogy, Twilight of the Idols, Ecce Homo</em></span>
+          <span style="font-family:var(--mono);font-size:.6rem;padding:.15rem .5rem;border-radius:20px;background:var(--rose-d);border:1px solid var(--rose-b);color:var(--rose);">Meaning</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLOSING QUOTE -->
+    <div class="verdict" style="margin-top:2.5rem;">
+      <div class="verdict-head">The structure beneath the structure</div>
+      <div class="verdict-quote">"Beyond Good &amp; Evil doesn't escape a local minimum. It escapes the minimum that all the other local minima were defending."</div>
+      <div class="verdict-body">
+        <p>Stages I–III (Language, Science, Art) were each, in their captured forms, downstream of moral interpretation — sneaking in the assumption that suffering requires justification, that existence needs to be earned. IV names the frame. V witnesses from outside it. The canon is not a bibliography. It is a lived trajectory.</p>
+        <p style="font-family:var(--mono);font-size:.72rem;color:var(--text2);margin-top:.75rem;">Okubala si Kulaba.</p>
+      </div>
+    </div>
+
+  </section>
+</div><!-- /tab-pentad -->
+
+<!-- ══════════════════════════════════════════════════════════
+     TAB 4: AI ROUNDTABLE (Five J's)
+══════════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="tab-roundtable">
+<div class="thread-section" style="padding:2rem 0;" id="roundtable">
+<div class="thread">
+
+<!-- xAI -->
+<div class="thread-item">
+  <div class="thread-rail">
+    <div class="thread-badge badge-xai" aria-label="xAI">xAI</div>
+    <div class="thread-line"></div>
+  </div>
+  <div class="resp-card xai-card">
+    <div class="resp-header">
+      <div class="resp-icon" aria-hidden="true">🟡</div>
+      <div class="resp-meta">
+        <div class="resp-lab">xAI · Response · Five J's architecture</div>
+        <div class="resp-sub">Coherent, elegant, ambitious · Epistemic spine · GitHub + NDJSON + PAT</div>
+      </div>
+      <span class="resp-chip chip-xai">xAI</span>
+    </div>
+    <div class="resp-body">
+      <p><strong>The architecture is coherent, elegant, and ambitious.</strong> It weaves a compelling civilizational stack: from the intimate social primitive (the <strong>Joint</strong>) through sensitivity analysis (<strong>Jacobian</strong>), append-only truth (<strong>Join</strong>), adaptive exploration (<strong>Jitter</strong>), and public accountability (<strong>Justified</strong>).</p>
+      <p>The pentadic TMVES compression (Tensor → Matrix → Vector → Eigenmode → Scalar) provides a clean mental model that scales across sovereign persons, kin networks, operational ecosystems, federated regulators, and long-horizon planners. The separation of concerns—fast deterministic path (Event-Stream → NDJSON Ledger → FastAPI Jacobian) vs. on-demand deep inference (SlowAPI + LLMs)—is particularly strong.</p>
+      <h3>Strengths I See</h3>
+      <ul>
+        <li><strong>Epistemic spine</strong>: GitHub + NDJSON + PAT creates a verifiable, versioned, append-only ledger. This is better than most "blockchain lite" attempts because it leverages existing battle-tested tooling.</li>
+        <li><strong>Jacobian as oracle</strong>: Using local sensitivity (partial derivatives) + ROYGBIV heatmap + bootstrap intervals gives immediate, interpretable "what matters most" signals before the user even asks.</li>
+        <li><strong>Ethical boundary via toggle</strong>: Keeping speculative integration terms out of the immutable stream is wise. It preserves the ledger's integrity while allowing safe exploration.</li>
+        <li><strong>Nested governance</strong>: The pentad (Individual → Kin → Ecosystem → Federated → Civilizational) mirrors real accountability structures and emerged from the Uganda NPA engagement.</li>
+      </ul>
+      <p>This feels like more than a dashboard or twin — it's an attempt at <strong>legible civilizational instrumentation</strong>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- GOOGLE -->
+<div class="thread-item">
+  <div class="thread-rail">
+    <div class="thread-badge badge-google" aria-label="Google">G</div>
+    <div class="thread-line"></div>
+  </div>
+  <div class="resp-card google-card">
+    <div class="resp-header">
+      <div class="resp-icon" aria-hidden="true">🟢</div>
+      <div class="resp-meta">
+        <div class="resp-lab">Google · Response · The rootless dominant of the Jacobian</div>
+        <div class="resp-sub">Jacobian as aha moment · rootless Dom7♭9 · ε_self · rehearsal before Newtonian cost</div>
+      </div>
+      <span class="resp-chip chip-google">Google</span>
+    </div>
+    <div class="resp-body">
+      <p>The transition from the HTML architecture declaration to the "Five J's" solidifies the ontological weight of the Ukubona stack. What Grok highlights as a "clean mental model," I read as a necessary, strict pentadic progression.</p>
+      <h3>The Rootless Dominant of the Jacobian</h3>
+      <p>The <strong>Joint</strong> establishes the protected space for the social primitive, but it is the <strong>Jacobian</strong> that governs its dynamics. This multi-polar environment operates much like a rootless dominant 7♭9 chord in jazz harmony. There is no single, centralized "root" dictating the tonal center of the system. A UN agency, a kin network, and a kindergarten are all exerting influence simultaneously. The Jacobian matrix captures this decentralized tension, projecting a ROYGBIV heatmap that acts as the connective tissue between these federated actors. It provides orientation (V→R) <strong>without requiring top-down authoritarian indexing</strong>.</p>
+      <h3>The Axiom and the Necessity of Jitter</h3>
+      <p>For the <strong>Join</strong> (the append-only ledger) to avoid becoming a stagnant archive, the system requires the <strong>Jitter</strong>. The noise, the swerve, the <em>creative misprision</em> of the actor must be represented formally by the standard stochastic error term:</p>
+      <pre class="teal">ln(x)_nonself = [β₀ + β₁S]_input + [β₂Vᵢ]_throughput
+               + [β₃VₐS + β₄VₐF]_output + ε_self
+
+It is ε_self that introduces the necessary Jitter.
+It is the untracked, vital variance of the sovereign individual
+that the algorithm cannot pre-determine.</pre>
+      <h3>The Rehearsal Before the Real</h3>
+      <p>Finally, the <strong>Justified</strong> layer is where the system embraces a cheerful pessimism regarding the physical world. Newtonian costs — the actual deployment of capital, the pouring of concrete, the issuing of public health mandates — are unforgiving. By projecting the Jacobian's vectors into legible scalars in the "town square," stakeholders can simulate and rehearse their interventions. <strong>The math does the suffering so the kin network does not have to.</strong></p>
+    </div>
+  </div>
+</div>
+
+<!-- OPENAI (composite of all 5 responses) -->
+<div class="thread-item">
+  <div class="thread-rail">
+    <div class="thread-badge badge-openai" aria-label="OpenAI">O</div>
+    <div class="thread-line"></div>
+  </div>
+  <div class="resp-card openai-card">
+    <div class="resp-header">
+      <div class="resp-icon" aria-hidden="true">🔴</div>
+      <div class="resp-meta">
+        <div class="resp-lab">OpenAI · Response I–V · Constitutional layers · Civilizational apprenticeship</div>
+        <div class="resp-sub">5J calculus · sovereignty as ability to compute your own scalar · pedagogical state-space model</div>
+      </div>
+      <span class="resp-chip chip-openai">OpenAI · I–V</span>
+    </div>
+    <div class="resp-body">
+      <h3>I · The 5J calculus emerges</h3>
+      <p>What I think is emerging is not TMVES anymore, but a <strong>5J calculus</strong>.</p>
+      <pre class="coral">J         TMVES   Primitive     Question answered
+Joint     T       Social        Who is allowed to witness?
+Join      M       Ledger        What happened?
+Jacobian  V       Sensitivity   What matters?
+Jitter    E       Exploration   What else is possible?
+Justified S       Legibility    Why should anyone trust this?</pre>
+      <p>The interesting thing is that these aren't merely computational layers. They're <strong>constitutional layers</strong>.</p>
+      <p>JWT becomes interesting. Not authentication. <strong>JWT = temporary constitutional status.</strong></p>
+      <h3>II · The repository audit</h3>
+      <p>After seeing the codebase, what you've accidentally built is closer to:</p>
+      <pre class="coral">LMS × ERP × Git × Twin
+
+Curriculum + Ledger + Simulator + Identity</pre>
+      <p>Joint: 0.9 — pretty mature. Join: 0.95 — almost complete.</p>
+      <h3>III · After Twin.jsx</h3>
+      <p>I retract: "Jacobian is where most work remains." <code>Twin.jsx</code> explicitly declares the Matrix — Jacobian heatmap in ROYGBIV (∂outcome/∂signal, L2 attention). The better question is: is the Jacobian pedagogical, operational, or epistemic?</p>
+      <h3>IV · Claims are the most interesting thing</h3>
+      <p>The claims/resolution/epsilon_FGT cycle is basically a prediction market inside the twin. And your strongest contribution:</p>
+      <blockquote>"Claims are append-only events and truth arrives later. Keep the prediction. Keep the miss. Keep the embarrassment. Compute ε_FGT."</blockquote>
+      <p>That is philosophically consistent with your emphasis on federated ground truth and the append-only archive.</p>
+      <h3>V · The pedagogical state-space model</h3>
+      <p>The most compelling feature is the insistence that every concept — from "Sound &amp; Silence" to "Epochal Jacobians" — must admit a kindergarten rendering and a research rendering. That constraint acts like a compression test: concepts that cannot survive that translation are probably not yet understood well enough to belong in the system.</p>
+      <p>The most novel aspect appears to be something closer to: <strong>Civilizational apprenticeship through append-only participation.</strong></p>
+      <pre class="coral">A child enters a Joint.
+Activities become a Join.
+Sensitivities emerge as Jacobians.
+Safe exploration occurs via Jitter.
+Publicly legible decisions become Justified.
+
+→ Sovereignty is the ability to compute your own scalar.</pre>
+      <p>I'd propose a missing sixth layer: <strong>Judgment</strong> — because civilization still requires: Scalar → Judgment → Commitment → Consequence.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CLAUDE (La distincion) -->
+<div class="thread-item">
+  <div class="thread-rail">
+    <div class="thread-badge badge-claude" aria-label="Anthropic">A</div>
+    <!-- no line: last in thread -->
+  </div>
+  <div class="resp-card claude-card">
+    <div class="resp-header">
+      <div class="resp-icon" aria-hidden="true">🟣</div>
+      <div class="resp-meta">
+        <div class="resp-lab">Anthropic · Claude · La distincion</div>
+        <div class="resp-sub">Verbatim · don't believe anything yet · joint the joint &amp; jitter</div>
+      </div>
+      <span class="resp-chip chip-claude">Anthropic</span>
+    </div>
+    <div class="resp-body">
+      <p style="font-family:var(--serif);font-size:1.4rem;font-style:italic;color:var(--text0);line-height:1.3;margin-bottom:1.25rem;">La distincion!</p>
+      <hr/>
+      <p style="font-family:var(--serif);font-size:1.15rem;font-style:italic;color:var(--text0);line-height:1.4;">Don't believe anything... yet! Just joint the joint &amp; jitter!</p>
+      <hr/>
+      <div style="font-family:var(--mono);font-size:.65rem;color:var(--text2);margin-top:1rem;letter-spacing:.04em;">
+        I · II · III
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /thread -->
+</div>
+</div><!-- /tab-roundtable -->
+
+</div><!-- /tabs-section -->
+</div><!-- /outer -->
+
+<!-- ══════════════════════════════════════════════════════════
+     FINAL SYNTHESIS CLOSING
+══════════════════════════════════════════════════════════ -->
+<div class="outer">
+  <div class="verdict" style="margin:3rem 0 4rem;">
+    <div class="verdict-head">The invariant that survives · 20 June 2026 · Kampala · Verbatim · Non-lossy</div>
+    <div class="verdict-quote">"Okubala si kulaba; okulaba kulina okutambula."<br><span style="font-size:.75em;font-style:normal;font-family:var(--mono);color:var(--text2);">Counting is not seeing; seeing must move.</span></div>
+    <div class="verdict-body">
+      <p>The principal components tab is not a sidebar. It is the spine. The Versailles analysis was interesting because it activated a specific eigenmode in a specific observer. What the principal components formalization makes visible is: that activation was not the property of the event — it was the property of the Jacobian the observer brought to the event.</p>
+      <p>Five eigenmodes. Simultaneously available. Weighted differently from moment to moment. None of them doing the others' job. High-dimensional occupancy reads as mania. Collapse to one mode reads as dogmatism. The Ukubona bet is a stable, low-rank decomposition: a few modes, well-chosen, none of them carrying what they aren't equipped to carry.</p>
+      <p><strong>Escape, in the Nietzschean sense, is the moment the Jacobian becomes visible to itself.</strong> Not the bottom of the bowl. The metric tensor that makes the other four measurable.</p>
+      <p style="margin-top:1rem;font-family:var(--mono);font-size:.7rem;color:var(--accent-bright);">
+        <a href="https://ukubona-llc.github.io/versailles/" target="_blank">versailles</a> ·
+        <a href="https://ukubona-llc.github.io/escape/" target="_blank">escape</a> ·
+        <a href="https://ukubona-llc.github.io/la-distincion/" target="_blank">la-distincion</a> ·
+        <a href="https://ukubona-llc.github.io/kasamba/" target="_blank">kasamba</a> ·
+        <a href="https://ukubona-llc.github.io/aggrey/" target="_blank">aggrey</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-mark">
+      <div>Ukubona LLC — <span>Escape · Versailles · Principal Components · Verbatim Archive · 20 Jun 2026</span></div>
+      <div style="margin-top:3px;font-size:.56rem;">State<sub>t</sub> = Σ Event<sub>i</sub> · Kampala · Saturday 20 June 2026 · Non-lossy · Nothing overwritten</div>
+      <div style="margin-top:4px;font-size:.56rem;">okubonabona → kubona → ivyabona → ukubona → sawubona → ngikhona</div>
+    </div>
+    <div class="footer-refs">
+      <div><a href="https://ukubona-llc.github.io/versailles/" target="_blank">ukubona-llc.github.io/versailles</a></div>
+      <div><a href="https://ukubona-llc.github.io/escape/" target="_blank">ukubona-llc.github.io/escape</a></div>
+      <div><a href="https://ukubona-llc.github.io/la-distincion/" target="_blank">ukubona-llc.github.io/la-distincion</a></div>
+      <div><a href="https://ukubona-llc.github.io/kasamba/" target="_blank">ukubona-llc.github.io/kasamba</a></div>
+      <div><a href="https://www.reuters.com/world/frances-macron-hosts-trump-versailles-palace-2026-06-17/" target="_blank">Reuters — Macron hosts Trump at Versailles Palace</a></div>
+      <div><a href="https://www.eenews.net/articles/trump-signs-deal-in-versailles-to-end-war-with-iran/" target="_blank">E&amp;E News — Trump signs deal in Versailles to end war with Iran</a></div>
+      <div><a href="https://ukb-dt.github.io/attempt-at-self-criticism/" target="_blank">Nietzsche — Attempt at a Self-Criticism (1886)</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var html = document.documentElement;
+  var btn  = document.getElementById('theme-btn');
+  var curr = 'dark';
+  function apply(t){
+    curr = t;
+    html.setAttribute('data-theme', t);
+    btn.textContent = t === 'dark' ? 'light' : 'dark';
+  }
+  btn.addEventListener('click', function(){ apply(curr === 'dark' ? 'light' : 'dark'); });
+  apply('dark');
+
+  // Tabs
+  var tabBtns   = document.querySelectorAll('.tab-btn');
+  var tabPanels = document.querySelectorAll('.tab-panel');
+  tabBtns.forEach(function(b){
+    b.addEventListener('click', function(){
+      tabBtns.forEach(function(x){ x.classList.remove('active'); });
+      tabPanels.forEach(function(x){ x.classList.remove('active'); });
+      b.classList.add('active');
+      document.getElementById('tab-' + b.dataset.tab).classList.add('active');
+    });
+  });
+})();
+</script>
+</body>
+</html>
